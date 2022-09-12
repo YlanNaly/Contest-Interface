@@ -2,6 +2,7 @@ import { useState } from "react";
 import SignUp from '../component/SignUp'
 import { useNavigate } from "react-router";
 import '../../css/Login.css'
+import { BASE_URL } from "../libs/BaseUrl";
 export default function Login(props) {
     const handlesubmit=(e)=>{
         e.preventDefault()
@@ -12,21 +13,19 @@ export default function Login(props) {
     const [username , setUsername] = useState("");
     const [password , setPassword] = useState("");
     const [choose , setChoose ] = useState(false)
-    
     const getData =()=>{
-      /**   const options = {
+    /** 
+       const options = {
             method: 'POST',
             body: 
             username 
         }
-    
             fetch(`${BASE_URL}/login`, options)
             .then(response => response.status == 200 ? navigate('/accueil') : navigate('/') )
             .catch(error => {
-                console.log(error)
+            navigate('/accueil')
                 alert("couldn't attempt")
             })*/
-            navigate('/accueil')
     }
 return(
  <>  
@@ -40,15 +39,15 @@ return(
         <h1>Login</h1>
     <img src="https://i.ibb.co/bvqgKnm/account.png" width="120" height="120" />
         <div className="input">
-            <input type="email" name="email" className="form-input" id="email" placeholder="Email" required />
+            <input type="email" name="email" className="form-input" id="email" onChange={(e)=>setUsername(e.target.value)} placeholder="Email" required />
             <label for="email" id="email_label" className="label">Email</label>
         </div>
         <div className="input">
-            <input type="password" className="form-input" placeholder="Password" id="password" required />
+            <input type="password" className="form-input" placeholder="Password" id="password" required onChange={(e)=>setPassword(e.target.value)} />
             <label for="password" className="form-input" >Password</label>
         </div>
         <p><a href="#">Forgot your password?</a></p>
-        <button type="submit" id="submit_button">Login</button>
+        <button type="submit" id="submit_button" onClick={()=>getData()} >Login</button>
         <p>Or Sign Up Using:</p>
         <div className="social-share"><a href="#"><i className="fa-brands fa-google"></i> </a>or <a href="#"><i className="fa-brands fa-facebook-f"></i></a></div>
     </form>

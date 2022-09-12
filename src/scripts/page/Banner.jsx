@@ -8,7 +8,7 @@ export default function Banner () {
   <div className="banner-text">
     <h1 >GESTION DE CONCOURS</h1>
     <div class="mt-40">
-      <a href="#apropos" class="btn1 btn-lg btn-color btn-icon">
+      <a href="#dashboard" class="btn1 btn-lg btn-color btn-icon">
         <span>Voir détails </span>    
         <i class="fa fa-arrow-right"></i> 
       </a>

@@ -1,10 +1,9 @@
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router';
+import { Toast, ToastContainer } from 'react-bootstrap';
 export default function ToastMessage() {
   const navigate = useNavigate()
     const notify = () => {
-     toast.success("Au revoir et merci d'être passé , Cliquez ici pour sortir")
+     Toast.success("Au revoir et merci d'être passé , Cliquez ici pour sortir")
     };
     return(
 <div>

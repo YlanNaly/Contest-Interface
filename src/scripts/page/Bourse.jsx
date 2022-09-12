@@ -17,8 +17,7 @@ export default function Bourse() {
             One Stop For all CS subjects
           </Card.Subtitle>
           <Card.Text>
-            GeeksforGeeks provides a platform for all the students to study
-            about all the subjects in CSE.
+            
           </Card.Text>
         </Card.Body>
       </Card>
