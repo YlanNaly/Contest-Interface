@@ -1,0 +1,64 @@
+.fa-bars {
+    align-items: center;
+    border-radius: 50%;
+    padding: 12px 15px 12px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.fa-sign-out-alt {
+  font-size: xx-large;
+  margin-left: 35%;
+  cursor: pointer ;
+}
+.sidebar1 {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #918f8f71;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .sidebar1 > a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-size: large;
+    cursor: pointer;
+  }
+   
+  .sidebar1 a.active {
+    color: white;
+  }
+  
+  .sidebar1 a:hover:not(.active) {
+    background-color: #7936b8b0;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar1 {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar1 a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar1 a {
+      text-align: center;
+      float: none;
+    }
+  }
