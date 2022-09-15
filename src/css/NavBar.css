@@ -18,6 +18,14 @@ list-style: none;
 cursor: pointer;
 
 }
+li:hover ::before {
+ border-bottom: dashed orange;
+ content: " ";
+ left : 50%;
+ width: 12px;
+ transition: 0.3s ease;
+
+}
 .navbar {
     display: flex;
     align-items: center;
@@ -37,9 +45,7 @@ cursor: pointer;
    }
    .menu li:hover {
     text-decoration: dotted;
-    font-size: x-large;
     border-radius: 5px;
-    transition: 0.3s ease;
    }
    .menu li {
     padding: 5px 14px;

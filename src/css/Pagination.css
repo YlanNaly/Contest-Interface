@@ -1,23 +1,26 @@
-#pagination{
+#pagination {
     float: right;
 }
+
 .table {
-    position: absolute;
     margin-top: 3%;
     max-width: 1200px;
     text-align: center;
+    margin-right: 22%;
     overflow: scroll;
-    margin-left: 4%;
 }
+
 @media screen and (max-width: 400px) {
-.content{
-    display: flex;
-    flex-direction: column;
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table {
+        width: max-content;
+    }
 }
-.table{
-    width: max-content;
-}
-}
+
 .status {
     background-color: rgb(51, 219, 51);
 }

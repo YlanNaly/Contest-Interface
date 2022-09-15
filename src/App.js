@@ -8,6 +8,7 @@ import Bourse from './scripts/page/Bourse';
 import HomePage from './scripts/page/Accueil';
 import Inscrit from './scripts/page/Apropos';
 import LandingPage from './scripts/page/LandingPage';
+import Listes from './scripts/component/Listes';
 function App() {
   return (
 <>
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path='/' element={<LandingPage/>} />
       <Route path='/login' element={<Login/>}/>
+      <Route path='/listes' element={<Listes/>}/>
       <Route path='/accueil' element={<HomePage/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/bourse' element={<Bourse/>}/>

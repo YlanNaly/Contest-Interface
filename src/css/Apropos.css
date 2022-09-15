@@ -1,0 +1,14 @@
+.center{
+    margin-left: 50%;
+    position: fixed;
+    margin-top: 12%;
+    border: 1px solid black;
+}
+.input{
+    flex-basis: 12px;
+    margin-bottom: 12%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}

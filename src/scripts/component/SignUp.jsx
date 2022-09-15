@@ -1,14 +1,13 @@
 import { useState } from "react";
-import Button from "../component/Button";
 import { useNavigate } from "react-router";
 import { BASE_URL } from "../libs/BaseUrl";
 import InPut from "../component/Button";
 import Login from "../page/Login";
+import axios from "axios";
 export default function SignUp(props) {
+
     const handlesubmit=(e)=>{
         e.preventDefault()
-        console.log(username)
-        console.log(password)
     };
     const navigate = useNavigate()
     const [username , setUsername] = useState("");
@@ -18,17 +17,18 @@ export default function SignUp(props) {
     const addAdmin = () =>{
 
         const options = {
-            method: 'POST',
             body: {
             username  :  username ,
             password  : password ,
-            role      : 'VISITOR'
+            role      : 'ADMIN',
+            enabled   : true,
+            locked    : false
             }
         }
-            fetch(`${BASE_URL}`+'/authorization', options)
-            .then(response => response.status == 200 ? navigate('/accueil') : navigate('/') )
+            axios.post(`${BASE_URL}`+'/signup', options)
+            .then(response => response.status == 200 ? navigate('/accueil') : navigate('/login') )
             .catch(error => {
-                console.log(error)
+                navigate('/login')
                 alert("couldn't added person")
             })
     }

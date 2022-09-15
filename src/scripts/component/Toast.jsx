@@ -7,11 +7,10 @@ export default function ToastMessage() {
     };
     return(
 <div>
-<i class="fas fa-sign-out-alt" onClick={()=>notify()}></i>
+<i class="fas fa-sign-out-alt" onClick={()=>navigate('/')}></i>
 <ToastContainer
   position="top-left"
   onClick={()=>navigate('/')}
-  closeButton={false}
 />
 </div>
     )
