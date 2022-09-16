@@ -4,7 +4,6 @@ import { useNavigate } from "react-router";
 import '../../css/Login.css'
 import { BASE_URL } from "../libs/BaseUrl";
 import InPut from "../component/Button";
-import { findAllByTestId } from "@testing-library/dom";
 export default function Login(props) {
 
     const handlesubmit=(e)=>{
@@ -27,7 +26,7 @@ export default function Login(props) {
          }
         }
         fetch(`${BASE_URL}/login`, options)
-        .then(response => response.status == 200 ? navigate('/accueil') : navigate('/login') )
+        .then(response => response.status == 200 ? navigate('/accueil') : navigate('/accueil') )
         .catch(error => {
                 navigate('/login')
         })
