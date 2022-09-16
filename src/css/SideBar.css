@@ -5,6 +5,9 @@
     margin-top: 12px;
     cursor: pointer;
 }
+.center {
+  position: absolute;
+}
 .fa-sign-out-alt {
   font-size: xx-large;
   margin-left: 35%;

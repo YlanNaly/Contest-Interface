@@ -24,7 +24,7 @@ export default function Inscrit () {
     return(
 <div>
     <div className="left"><SideBar/></div>
-    <div className="center">
+    <div className="center1">
         <label>CONDITIONS D'ADMISSION</label>
         <form className="form" onSubmit={handleSubmit} >
             <input className ="input" onChange={(e)=>setMinAdmin(e.target.value)} />

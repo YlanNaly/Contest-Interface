@@ -20,10 +20,9 @@ export default function Login(props) {
        const options = {
             method: 'POST',
             body: {
-            "username" : {username},
-            "password" : {password},
+            "username" :username,
+            "password" :password,
             "enabled" : true,
-            "role" : "ADMIN",
             "locked":false
          }
         }
