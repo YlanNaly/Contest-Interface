@@ -27,9 +27,9 @@ export default function Inscrit () {
     <div className="center1">
         <label>CONDITIONS D'ADMISSION</label>
         <form className="form" onSubmit={handleSubmit} >
-            <input className ="input" onChange={(e)=>setMinAdmin(e.target.value)} />
-            <input className ="input" onChange={(e)=>setMinAdmin(e.target.value)}/>
-            <input className ="input" onChange={(e)=>setMinAdmin(e.target.value)}/>
+            <input className ="input" onChange={(e)=>setMinAdmin(e.target.value)} placeholder="Min Admin" />
+            <input className ="input" onChange={(e)=>setMinList(e.target.value)} placeholder="Min Liste"/>
+            <input className ="input" onChange={(e)=>setMinMAth(e.target.value)} placeholder="Min Maths"/>
             <button className="button1" onClick={putMethod}>Changer</button>
         </form>
     </div>
